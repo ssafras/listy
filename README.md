@@ -11,6 +11,11 @@ A grocery shopping list mobile app that utilizes Convolutional Neural Networks f
   - ./server | The API that gets the images from the mobile app, creates a job at REDIS and returns the predictions for the jobs that have finished running.
   - ./workers | Worker scripts that read from a REDIS queue, perform the prediction and write the results back to REDIS.
 
+# Dataset
+
+### Download Link
+  - The dataset can be downloaded from "[here](http://46.4.18.132/data-processed.tar.xz)".
+
 # How to run locally
 
 ### Requirements
@@ -19,7 +24,7 @@ A grocery shopping list mobile app that utilizes Convolutional Neural Networks f
   - Phonegap installed (both locally and on mobile phone)
 
 ### Needed Files
-  - The model.h5 that you can download from "here". This needs to be copied to the ./workers/model-XYZ folder
+  - The model.h5 that you can download from "[here](http://46.4.18.132/model.h5)". This needs to be copied to the ./workers/model-224 folder
 
 ### Running the project
 
