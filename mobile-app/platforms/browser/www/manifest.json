@@ -1,0 +1,13 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "listy",
+  "short_name": "listy",
+  "version": "com.phonegap.helloworld",
+  "description": "Listy - grocery shopping list made easy.",
+  "author": "Listy Team",
+  "icons": [],
+  "orientation": "portrait",
+  "start_url": "index.html",
+  "theme_color": "#2196f3"
+}

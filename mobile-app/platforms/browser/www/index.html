@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' gap:; style-src 'self' 'unsafe-inline'; media-src *; img-src * data: blob: 'unsafe-inline';" />
+    <!-- Good default declaration:
+    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+        * Enable inline JS: add 'unsafe-inline' to default-src
+        * Enable eval(): add 'unsafe-eval' to default-src
+    * Create your own at http://cspisawesome.com
+    -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+
+    <!-- Color theme for statusbar -->
+    <meta name="theme-color" content="#2196f3">
+    <title>listy</title>
+
+    <!-- Path to Framework7 Library CSS -->
+    <link rel="stylesheet" href="external/framework7/css/framework7.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    
+</head>
+
+<body class="color-theme-orange theme-dark">
+<!-- <body class="color-theme-orange"> -->
+
+    <!-- App root element -->
+    <div id="app">
+      <!-- Statusbar overlay -->
+      <div class="statusbar"></div>
+
+      <!-- Your main view, should have "view-main" class -->
+      <div class="view view-main">
+        <!-- Initial Page, "data-name" contains page name -->
+        <div data-name="home" class="page">
+
+          <!-- Top Navbar -->
+          <div class="navbar">
+            <div class="navbar-inner">
+              <div class="title">Manage your list</div>
+            </div>
+          </div>
+
+          <div id="cornerFab" class="fab fab-right-bottom">
+            <a href="#">
+              <!-- First icon is visible when Speed Dial actions are closed -->
+              <i class="icon f7-icons">add</i>
+              <!-- Second icon is visible when Speed Dial actions are opened -->
+              <i class="icon f7-icons">close</i>
+            </a>
+            <!-- Speed Dial action buttons -->
+            <div class="fab-buttons fab-buttons-top">
+              <a href="" class="fab-label-button add_camera">
+                <span><i class="icon f7-icons">camera</i></span>
+                <span class="fab-label">Use Camera</span>
+              </a>
+              <a href="" class="fab-label-button add_manually">
+                <span><i class="icon f7-icons">compose</i></span>
+                <span class="fab-label">Add Manually</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Scrollable page content -->
+          <div class="page-content">
+            <!-- <img id="myImage" src=""> -->
+            <p class="text-align-center no-items" style="padding-top: 150px">
+              There are no items in your list.
+            </p>
+
+            <div class="list media-list fab-close items-list" style="margin-top: 0px">
+              <ul class="items-list-ul">
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="external/framework7/js/framework7.min.js"></script>
+    <!-- Other needed libraries -->
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/lodash.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+        
+    </script>
+</body>
+
+</html>
